@@ -65,7 +65,7 @@ const Document: NextPage = () => {
                 style={{
                   margin: "1rem 0",
                   fontSize: "1.5rem",
-                  fontFamily: "Rubik,sans-serif",
+                  fontFamily: "Rubik sans-serif",
                   fontWeight: "bold",
                 }}
               >
@@ -144,7 +144,7 @@ const Document: NextPage = () => {
                   style={{
                     textAlign: "left",
                     fontSize: "0.9em",
-                    fontFamily: "Arial,sans-serif;",
+                    fontFamily: "Arial sans-serif;",
                   }}
                 >
                   {PEM}
