@@ -88,7 +88,7 @@ const Document: NextPage = () => {
                       }}
                     >
                       {user.map((u) => (
-                        <Box style={{margin: '10px'}}>
+                        <Box style={{margin: '10px'}} key={u.name}>
                           <Grid container spacing={2} style={{marginBottom: '10px'}}>
                             <Grid item xs={12} sm={4} md={2}>
                               <UserName>

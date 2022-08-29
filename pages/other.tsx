@@ -1,7 +1,5 @@
 const other = () => {
-    return(
-        
-    )
+    return
 }
 
 export default other
