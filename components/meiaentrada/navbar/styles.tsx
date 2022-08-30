@@ -1,7 +1,5 @@
-// import styled from "@emotion/styled";
-
 import { Box } from "@mui/system";
-import styled, { keyframes } from 'styled-components';
+import styled from "styled-components";
 export const Span = styled.span`
   ::after {
     display: inline-block;
@@ -56,7 +54,7 @@ interface Props {
 export const List = styled(Box)<Props>`
   background-color: #005e9e;
   width: 100%;
-  display: none;
+  display: flex;
   @media (max-width: 1200px) {
     display: ${({ open }) => (open ? "block" : "none")};
     position: absolute;
@@ -65,14 +63,3 @@ export const List = styled(Box)<Props>`
     padding: 16px;
   } ;
 `;
-
-const FadeInAnimation = keyframes`  
-  from { opacity: 0; }
-  to { opacity: 1; }
-`;
-export const FadeIn = styled(Box)`
-  animation-name: ${FadeInAnimation};
-`;
-
-
-// export default { Span, StyledBurger }

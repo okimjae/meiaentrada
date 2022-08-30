@@ -11,7 +11,7 @@ const Footer = () => {
     >
       <Typography
         style={{
-          fontFamily: "Rubik,sans-serif",
+          fontFamily: "Rubik sans-serif",
           fontWeight: 500,
           fontSize: "1.9em",
           color: "white",
@@ -54,7 +54,7 @@ const Footer = () => {
       </Grid>
       <Typography
         style={{
-          fontFamily: "Rubik,sans-serif",
+          fontFamily: "Rubik sans-serif",
           fontSize: "18px",
           color: "#f2b035",
           textAlign: "center",

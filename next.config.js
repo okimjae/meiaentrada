@@ -4,7 +4,8 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['testejae.s3.amazonaws.com']
-  }
+  },
+  // pageExtensions: ['styles.tsx']
 }
 
 module.exports = nextConfig

@@ -2,8 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Box, Grid, Divider, Typography } from "@mui/material";
-import Footer from "./components/meiaentrada/footer";
-import Header from "./components/meiaentrada/header.tsx";
+import Footer from "../components/meiaentrada/footer";
+import Header from "../components/meiaentrada/header.tsx";
 import styled from "@emotion/styled";
 
 const Document: NextPage = () => {
@@ -62,8 +62,8 @@ const Document: NextPage = () => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap"
           rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap"
         />
       </Head>
       <header>

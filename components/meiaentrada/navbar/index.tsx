@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Box, Button, Menu, MenuItem, Fade } from "@mui/material";
 import Link from "next/link";
-import { StyledBurger, Span, List, FadeIn } from "./styles";
+import { StyledBurger, Span, List } from "./styles";
 
 const Navbar = () => {
   const [firstMenu, setFirstMenu] = React.useState<null | HTMLElement>(null);
