@@ -1,17 +1,4 @@
-import {
-  Box,
-  Grid,
-  Divider,
-  List,
-  ListItem,
-  TableContainer,
-  Table,
-  TableHead,
-  TableCell,
-  TableRow,
-  TableBody,
-  Typography,
-} from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
 const Footer = () => {
   return (
@@ -19,7 +6,6 @@ const Footer = () => {
       style={{
         borderTop: "4px solid #f2b035",
         background: "#222f40",
-        // height: "350px",
         padding: 15,
       }}
     >
@@ -42,35 +28,33 @@ const Footer = () => {
         margin="auto"
         color="#f2b035"
         padding="0 20px"
-        spacing={2}
       >
         <Grid item xs={12} sm={4} md={3}>
           <Box marginTop={2}>
-            <Typography>Home</Typography>
+            <a href="https://www.meiaentrada.org.br">Home</a>
           </Box>
           <Box marginTop={2}>
-            <Typography>Lei da Meia-entrada</Typography>
+            <a href="https://meiaentrada.org.br/lei">Lei da Meia-entrada</a>
           </Box>
           <Box marginTop={2}>
-            <Typography>Chaves públicas</Typography>
+            <a href="https://meiaentrada.org.br/chaves-publicas">Chaves públicas</a>
           </Box>
           <Box marginTop={2}>
-            <Typography>FAQ</Typography>
+            <a href="https://meiaentrada.org.br/perguntas-e-respostas">FAQ</a>
           </Box>
         </Grid>
         <Grid item xs={12} sm={3} md={3}>
           <Box marginTop={2}>
-            <Typography>Notícias</Typography>
+            <a href="https://meiaentrada.org.br/noticias">Notícias</a>
           </Box>
           <Box marginTop={2}>
-            <Typography>Termos de Uso e Política de Privacidade</Typography>
+            <a href="https://meiaentrada.org.br/termos">Termos de Uso e Política de Privacidade</a>
           </Box>
         </Grid>
       </Grid>
       <Typography
         style={{
           fontFamily: "Rubik,sans-serif",
-          fontWeight: 500,
           fontSize: "18px",
           color: "#f2b035",
           textAlign: "center",

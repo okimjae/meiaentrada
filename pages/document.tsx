@@ -1,13 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import {
-  Box,
-  Grid,
-  Divider,
-  Typography,
-} from "@mui/material";
+import { Box, Grid, Divider, Typography } from "@mui/material";
 import Footer from "./components/meiaentrada/footer";
+import Header from "./components/meiaentrada/header.tsx";
 import styled from "@emotion/styled";
 
 const Document: NextPage = () => {
@@ -18,17 +14,27 @@ const Document: NextPage = () => {
     { name: "Nome", value: "Jae Woo Kim" },
     { name: "Instituição", value: "Universidade Anhembi Morumbi" },
     { name: "Curso", value: "Análise e Desenvolvimento de Sistemas" },
-    { name: "Documento de Identificação", value: "000000395905333" },
+    { name: "Documento de Identificação", value: "000000000213340" },
     { name: "Emissor", value: "UNE" },
   ];
-  
+
   const UserName = styled(Typography)`
     font-weight: bold;
     max-width: 120px;
-    @media(min-width: 600px) {
+    @media (min-width: 600px) {
       text-align: right;
-    };
-  `
+    } ;
+  `;
+
+  const Container = styled(Box)`
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+    @media (min-width: 767px) {
+      padding: 0 30px;;
+    } ;
+  `;
+
   return (
     <div>
       <Head>
@@ -42,14 +48,26 @@ const Document: NextPage = () => {
           rel="stylesheet"
         />
       </Head>
-      <header></header>
+      <header>
+        <Header />
+      </header>
 
       <main style={{ padding: "3rem 0" }}>
-          
-        <div style={{ maxWidth: 1140, margin: "auto", padding: "15px" }}>
-        <Typography style={{ color: "#005e9e", fontSize: '1.8rem', fontWeight: 'bold', borderBottom: '5px solid #005e9e', marginBottom: '3rem' }}>
-              Validação de CIE (Carteira de Identificação Estudantil)
-            </Typography>
+        <Container>
+          <Typography
+            style={{
+              color: "#005e9e",
+              fontSize: "1.8rem",
+              fontWeight: "bold",
+              borderBottom: "5px solid #005e9e",
+              marginBottom: "3rem",
+            }}
+          >
+            Validação de CIE{" "}
+            <span style={{ fontSize: "1.2rem" }}>
+              (Carteira de Identificação Estudantil)
+            </span>
+          </Typography>
           <div>
             <Box
               style={{
@@ -74,8 +92,8 @@ const Document: NextPage = () => {
             </Box>
             <Box style={{ marginBottom: "40px" }}>
               <Typography style={{ margin: "1rem 0", textAlign: "center" }}>
-                UNE atesta que {user[0].value} é estudante
-                e está regularmente matriculado(a) em {user[2].value} da {user[1].value}
+                UNE atesta que {user[0].value} é estudante e está regularmente
+                matriculado(a) em {user[2].value} da {user[1].value}
               </Typography>
               <Box>
                 <Grid container spacing={2}>
@@ -83,17 +101,14 @@ const Document: NextPage = () => {
                     <Box
                       style={{
                         borderTop: "1px solid #e0e0e0",
-                        // borderBottom: "1px solid #e0e0e0",
                         width: "100%",
                       }}
                     >
                       {user.map((u) => (
-                        <Box style={{margin: '10px'}} key={u.name}>
-                          <Grid container spacing={2} style={{marginBottom: '10px'}}>
+                        <Box style={{ margin: "10px" }} key={u.name}>
+                          <Grid container style={{ marginBottom: "10px" }}>
                             <Grid item xs={12} sm={4} md={2}>
-                              <UserName>
-                                {u.name}:
-                              </UserName>
+                              <UserName>{u.name}:</UserName>
                             </Grid>
                             <Grid item xs={12} sm={8} md={10}>
                               <Typography>{u.value}</Typography>
@@ -114,6 +129,7 @@ const Document: NextPage = () => {
                         width={220}
                         height={300}
                         src="https://testejae.s3.amazonaws.com/20220802_185027.jpg"
+                        style={{ margin: "auto" }}
                       />
                     </Box>
                   </Grid>
@@ -121,7 +137,13 @@ const Document: NextPage = () => {
               </Box>
             </Box>
             <Box>
-              <Typography style={{ fontSize: "1.25rem" }}>
+              <Typography
+                style={{
+                  fontSize: "1.25rem",
+                  fontWeight: "bold",
+                  marginBottom: "10px",
+                }}
+              >
                 Certificado de Atributo em formato PEM:
               </Typography>
               <Box
@@ -161,7 +183,7 @@ const Document: NextPage = () => {
               </Box>
             </Box>
           </div>
-        </div>
+        </Container>
       </main>
 
       <Footer />
