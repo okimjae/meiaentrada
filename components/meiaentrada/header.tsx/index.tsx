@@ -1,7 +1,5 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Image from "next/image";
-import Link from "next/link";
-import styled from "@emotion/styled";
 import Navbar from "../navbar";
 
 const Header = () => {

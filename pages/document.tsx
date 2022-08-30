@@ -49,7 +49,7 @@ const Document: NextPage = () => {
       width: 300px;
       max-width: 100%;
       background: #005e9e;
-      z-index: 2;
+      z-index: 1;
     }
   `;
 
@@ -71,10 +71,10 @@ const Document: NextPage = () => {
       </header>
       <main style={{ padding: "3rem 0" }}>
         <Container>
-          <Box style={{ position: "relative" }}>
+          <Box style={{ position: "relative", marginTop: '100px' }}>
             <CustomTitle>
               Validação de CIE{" "}
-              <span style={{ fontSize: "1.2rem" }}>
+              <span style={{ fontSize: "1.7rem" }}>
                 (Carteira de Identificação Estudantil)
               </span>
             </CustomTitle>
